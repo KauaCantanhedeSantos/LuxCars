@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rajdhani;
+}
+
+:root{
+    /* COLOR TO USE */
+    --one-plt: #000;
+    --two-plt: #3d0000;
+    --thr-plt: #950101;
+    --fur-plt: #ff0000;
+    --fiv-plt: #ff0808;
+
+    --back-color: black;
+    --color-text: white;
+    --shadow-color: gray;
+    --color-link: #0a58ca;
+
+    /* CARS COLORS */
+    --bgt-color: #ff202c;
+    --ast-color: #0e7c6d;
+    --mcl-color: #ff8b07;
+    --kns-color: #ffcb2a;
+}
+body{
+    background-color: var(--back-color);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+@media(min-width: 1250px){
+    /* HEADER WITH NAVIGATION BAR */
+    .header{
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .navbar{
+        border: 1px solid blue;
+        width: 91%;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        /* LOGO */
+    .header .navbar .logo{
+        padding: 0.7rem 0.5rem 0.2rem 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+    .header .navbar .logo h2{
+        font-size: 2.8rem;
+        font-weight: 700;
+        padding: 0.5rem;
+        background: linear-gradient(to right, #505050 0%, #f0f0f0 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+        /* ICON MENU INTERATIVE */
+    .header .navbar .icon{
+        border-radius: 0.5rem;
+    }
+    .header .navbar .icon i{
+        padding: 0.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+
+        background: linear-gradient(to left, #505050 0%, #f0f0f0 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    /* MENU  */
+    .sidebar-menu{
+        border: 1px solid rgb(0, 0, 0);
+        width: 20%;
+        height: 100vh;
+        left: 130%;        
+        padding: 0.5rem;
+        position: absolute;
+        transition: 0.5s ease-in-out;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.425);
+        
+    }
+    .sidebar-menu.expand{
+        left: 80%;
+        display: block;
+        transition: 0.5s ease-in-out;
+    }
+    .sidebar-menu ul{
+        list-style: none;
+        height: 48vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .sidebar-menu .menu li{
+        left: -1rem;
+        width: 90%;
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+    }
+    .sidebar-menu .menu li a{
+        text-decoration: none;
+        font-size: 2.3rem;
+        font-weight: 600;
+        color: var(--color-text);
+
+        display: inline-block;
+        position: relative;
+        padding-bottom: 3px;
+    }
+    .sidebar-menu .menu li a span{
+        background-image: linear-gradient(to right, transparent 0%,var(--fiv-plt) 50%);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 0% 5px;
+        transition: background-size 0.3s ease;
+    }
+    .sidebar-menu .menu li:hover a span{
+        background-size: 100% 3px;
+        color: var(--color-text);
+        transition: 1s;
+    }
+    /* VIDEO SLOGAN */
+    .slogan{
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        border: 1px solid blue;
+    }
+    .slogan .content {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .slogan .content video{
+        width: 99.99%;
+        opacity: 0.7;
+        z-index: -1;
+
+    }
+    .slogan .content .text{
+        z-index: 1;
+        position: relative;
+        top: -40rem;
+    }
+    .slogan h2{
+        font-size: 6rem;
+        font-weight: bold;
+        padding: 3rem;
+        background: linear-gradient(to right, #ffffffa6 0%, #424242a6 10%, #ffffffa6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        animation:  gradrow 25s linear infinite;
+    }
+    @keyframes gradrow {
+        0%{
+          background-position: 0%;
+        } 100% {
+          background-position: 400%;
+        }
+    }
+    /* BRANDS CARS IN TO WEBSITE */
+    .cars-brands{
+        border: 1px solid blue;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+        z-index: 1;
+        top: -10rem;
+    }
+    .cars-brands .content{
+        border: 1px solid red;
+        width: 90%; 
+        padding: 1rem;
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cars-brands .content .bgtt,
+    .cars-brands .content .astm,
+    .cars-brands .content .knsg,
+    .cars-brands .content .mcln{
+        border: 1px solid red;
+        width: 23%;
+        padding: 0.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cars-brands .content .bgtt h2, 
+    .cars-brands .content .astm h2,
+    .cars-brands .content .knsg h2,
+    .cars-brands .content .mcln h2{
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
+        margin: 0.1rem 0 0 0;
+
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .cars-brands .content .bgtt{
+        background: linear-gradient(to right, var(--bgt-color) 0%, var(--one-plt) 40%, var(--bgt-color) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        animation:  gradrow 35s linear infinite;
+    }
+    .cars-brands .content .astm{
+        background: linear-gradient(to right, var(--ast-color) 0%, var(--one-plt) 40%, var(--ast-color) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        animation:  gradrow 35s linear infinite;
+    }
+    .cars-brands .content .knsg{
+        background: linear-gradient(to right, var(--kns-color) 0%, var(--one-plt) 40%, var(--kns-color) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        animation:  gradrow 35s linear infinite;
+    }
+    .cars-brands .content .mcln{
+        background: linear-gradient(to right, var(--mcl-color) 0%, var(--one-plt) 40%, var(--mcl-color) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        animation:  gradrow 35s linear infinite;
+    }
+    /* VEHICLE */
+    .vehicle{
+        border: 1px solid red;
+        position: relative;
+        top: -7.58rem;
+
+        display: flex; 
+        justify-content: center;
+    }
+    .vehicle .content{
+        width: 90%;
+        border: 1px solid blue;
+    }
+    
+    
+}
