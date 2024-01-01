@@ -139,7 +139,6 @@ body{
         padding: 0.5rem;
         display: flex;
         justify-content: center;
-        border: 1px solid blue;
     }
     .slogan .content {
         width: 90%;
@@ -178,7 +177,6 @@ body{
     }
     /* BRANDS CARS IN TO WEBSITE */
     .cars-brands{
-        border: 1px solid blue;
         padding: 0.5rem;
         display: flex;
         justify-content: center;
@@ -188,7 +186,6 @@ body{
         top: -10rem;
     }
     .cars-brands .content{
-        border: 1px solid red;
         width: 90%; 
         padding: 1rem;
         text-transform: uppercase;
@@ -201,7 +198,6 @@ body{
     .cars-brands .content .astm,
     .cars-brands .content .knsg,
     .cars-brands .content .mcln{
-        border: 1px solid red;
         width: 23%;
         padding: 0.5rem;
 
@@ -213,7 +209,6 @@ body{
     .cars-brands .content .astm h2,
     .cars-brands .content .knsg h2,
     .cars-brands .content .mcln h2{
-        border: 1px solid red;
         width: 100%;
         text-align: center;
         margin: 0.1rem 0 0 0;
@@ -255,7 +250,6 @@ body{
     }
     /* VEHICLE */
     .vehicle{
-        border: 1px solid red;
         position: relative;
         top: -7.58rem;
 
@@ -264,7 +258,6 @@ body{
     }
     .vehicle .content{
         width: 90%;
-        border: 1px solid blue;
     }
     
     
